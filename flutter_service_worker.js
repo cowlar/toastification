@@ -9,11 +9,11 @@ const RESOURCES = {"assets/AssetManifest.json": "46e25f7587646dfe277a42c2efce049
 "assets/assets/img/logo-text.svg": "0207e15090dd90a65f82ae4aafa97ecf",
 "assets/assets/img/logo.png": "673101e38e1bd51d583497d7e41a9779",
 "assets/FontManifest.json": "cdb6071e0673e404dcd4f3236b4f4d12",
-"assets/fonts/MaterialIcons-Regular.otf": "4ec59c1f33c7d01533704e5cd66dd278",
+"assets/fonts/MaterialIcons-Regular.otf": "59dddb406bb6d4ee58528c3c5efc680c",
 "assets/fonts/PlusJakartaDisplay-Bold.otf": "1e5642fdde54004e7ac175ceb48b9a1f",
 "assets/fonts/PlusJakartaDisplay-Medium.otf": "1f27f846a2a8e5c0b3162e3fb1d78865",
 "assets/fonts/PlusJakartaDisplay-Regular.otf": "a81ce9b45769e9a0227e6949a9b4b9c8",
-"assets/NOTICES": "ecc5b70d8a0c593b0edc03506511cad7",
+"assets/NOTICES": "562ce808c5b1bd96acdf1a7f4bdf51cf",
 "assets/packages/font_awesome_flutter/lib/fonts/fa-brands-400.ttf": "0db203e8632f03baae0184700f3bda48",
 "assets/packages/font_awesome_flutter/lib/fonts/fa-regular-400.ttf": "01bb14ae3f14c73ee03eed84f480ded9",
 "assets/packages/font_awesome_flutter/lib/fonts/fa-solid-900.ttf": "efc6c90b58d765987f922c95c2031dd2",
@@ -32,11 +32,11 @@ const RESOURCES = {"assets/AssetManifest.json": "46e25f7587646dfe277a42c2efce049
 "icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
 "icons/Icon-maskable-192.png": "c457ef57daa1d16f64b27b786ec2ea3c",
 "icons/Icon-maskable-512.png": "301a7604d45b3e739efc881eb04896ea",
-"index.html": "5004b3adda236ec28b87c0b2004335be",
-"/": "5004b3adda236ec28b87c0b2004335be",
-"main.dart.js": "7fe20ab576cadc9e05a717a8e0b09fa6",
+"index.html": "ed227626567bce39ac24d9e229dd4d83",
+"/": "ed227626567bce39ac24d9e229dd4d83",
+"main.dart.js": "26e683f8e8104e0f24396bd51cb62f40",
 "manifest.json": "9a0de1ff26661cd281cb9deb3db33b02",
-"version.json": "f54f7c07506b4bb8f9dcb07f014df5c3"};
+"version.json": "4a8d0721ad29b29fe02998788b84b1de"};
 // The application shell files that are downloaded before a service worker can
 // start.
 const CORE = ["main.dart.js",
