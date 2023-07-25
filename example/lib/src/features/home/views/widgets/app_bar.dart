@@ -83,3 +83,52 @@ class ToastAppBar extends StatelessWidget {
     );
   }
 }
+
+class FloatingAppBar extends StatelessWidget {
+  const FloatingAppBar({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const SliverPersistentHeader(
+      delegate: SliverPersistance(),
+      pinned: true,
+    );
+  }
+}
+
+class SliverPersistance extends SliverPersistentHeaderDelegate {
+  const SliverPersistance();
+
+  @override
+  Widget build(
+    BuildContext context,
+    double shrinkOffset,
+    bool overlapsContent,
+  ) {
+    final theme = Theme.of(context);
+
+    final shrinkPercentage = 1 - ((maxExtent - shrinkOffset) / 100);
+
+    return Container(
+      decoration: BoxDecoration(
+        color: theme.colorScheme.background,
+        borderRadius: BorderRadius.circular(20),
+        boxShadow: [
+          BoxShadow.lerp(const BoxShadow(),const BoxShadow() , shrinkPercentage)!,
+        ],
+      ),
+      height: maxExtent,
+    );
+  }
+
+  @override
+  double get maxExtent => 72;
+
+  @override
+  double get minExtent => 72;
+
+  @override
+  bool shouldRebuild(covariant SliverPersistentHeaderDelegate oldDelegate) {
+    return true;
+  }
+}

@@ -21,7 +21,7 @@ class HomeScreen extends StatelessWidget {
         bottomNavigationBar: BottomNavigationView(),
         body: CustomScrollView(
           slivers: [
-            SliverToBoxAdapter(child: ToastAppBar()),
+            FloatingAppBar(),
             SliverToBoxAdapter(child: ToastHeader()),
             CustomizationSection()
           ],
