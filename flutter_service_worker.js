@@ -3,13 +3,14 @@ const MANIFEST = 'flutter-app-manifest';
 const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 
-const RESOURCES = {"assets/AssetManifest.bin": "314b5d306d3581d22c524ebd116e2115",
-"assets/AssetManifest.json": "46e25f7587646dfe277a42c2efce049b",
+const RESOURCES = {"assets/AssetManifest.bin": "6c96384d250c6de607da0ce003671534",
+"assets/AssetManifest.json": "96a786e5e6521e234eaddfa49667d936",
+"assets/assets/img/logo-black.png": "7a16ec0e03fabd3d5e268cf807485292",
 "assets/assets/img/logo-img.svg": "224738a5b23a61ab9f6b32396005ac5b",
 "assets/assets/img/logo-text.svg": "0207e15090dd90a65f82ae4aafa97ecf",
 "assets/assets/img/logo.png": "673101e38e1bd51d583497d7e41a9779",
 "assets/FontManifest.json": "cdb6071e0673e404dcd4f3236b4f4d12",
-"assets/fonts/MaterialIcons-Regular.otf": "59dddb406bb6d4ee58528c3c5efc680c",
+"assets/fonts/MaterialIcons-Regular.otf": "0ac43cda439e7ac687abbb6d060eb0ff",
 "assets/fonts/PlusJakartaDisplay-Bold.otf": "1e5642fdde54004e7ac175ceb48b9a1f",
 "assets/fonts/PlusJakartaDisplay-Medium.otf": "1f27f846a2a8e5c0b3162e3fb1d78865",
 "assets/fonts/PlusJakartaDisplay-Regular.otf": "a81ce9b45769e9a0227e6949a9b4b9c8",
@@ -32,9 +33,9 @@ const RESOURCES = {"assets/AssetManifest.bin": "314b5d306d3581d22c524ebd116e2115
 "icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
 "icons/Icon-maskable-192.png": "c457ef57daa1d16f64b27b786ec2ea3c",
 "icons/Icon-maskable-512.png": "301a7604d45b3e739efc881eb04896ea",
-"index.html": "6fe8bbcad14f3622f39b12264e5aa85b",
-"/": "6fe8bbcad14f3622f39b12264e5aa85b",
-"main.dart.js": "bc0d618bc4d37ae3b2d0a4ecd1b51779",
+"index.html": "0f62f0a773c0b544ed7867350162de9c",
+"/": "0f62f0a773c0b544ed7867350162de9c",
+"main.dart.js": "0b8053211b959585218a7280ed770aac",
 "manifest.json": "9a0de1ff26661cd281cb9deb3db33b02",
 "version.json": "2f5b696dfe2eda68057d98b5df173975"};
 // The application shell files that are downloaded before a service worker can
