@@ -104,7 +104,7 @@ class FlatToastWidget extends StatelessWidget {
                 decoration: BoxDecoration(
                   color: background,
                   borderRadius: borderRadius,
-                  border: Border.fromBorderSide(borderSide),
+                  // border: Border.fromBorderSide(borderSide),
                   boxShadow: boxShadow ?? defaultStyle.boxShadow(context),
                 ),
                 padding: padding ?? defaultStyle.padding(context),
