@@ -64,7 +64,7 @@ class BuiltInContent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Widget content = Padding(
-      padding: const EdgeInsets.only(right: 20),
+      padding: const EdgeInsets.only(right: 28),
       child: Text(
         title,
         style: style.titleTextStyle(context)?.copyWith(
