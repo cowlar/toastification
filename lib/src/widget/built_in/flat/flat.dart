@@ -85,75 +85,76 @@ class FlatToastWidget extends StatelessWidget {
       child: IconTheme(
         data: Theme.of(context).primaryIconTheme,
         child: GestureDetector(
-            onTap: onCloseTap == null
-                ? () {
-                    if (item != null) {
-                      toastification.dismiss(item!);
-                    }
+          onTap: onCloseTap == null
+              ? () {
+                  if (item != null) {
+                    toastification.dismiss(item!);
                   }
-                : () {
-                    onCloseTap!();
-                    if (item != null) {
-                      toastification.dismiss(item!);
-                    }
-                  },
-            child: Stack(
-              children: [
-                Container(
-                  constraints: const BoxConstraints(minHeight: 64),
-                  decoration: BoxDecoration(
-                    color: background,
-                    borderRadius: borderRadius,
-                    border: Border.fromBorderSide(borderSide),
-                    boxShadow: boxShadow ?? defaultStyle.boxShadow(context),
-                  ),
-                  padding: padding ?? defaultStyle.padding(context),
-                  child: Row(
-                    children: [
-                      icon ??
+                }
+              : () {
+                  onCloseTap!();
+                  if (item != null) {
+                    toastification.dismiss(item!);
+                  }
+                },
+          child: Stack(
+            children: [
+              Container(
+                constraints: const BoxConstraints(minHeight: 100),
+                decoration: BoxDecoration(
+                  color: background,
+                  borderRadius: borderRadius,
+                  border: Border.fromBorderSide(borderSide),
+                  boxShadow: boxShadow ?? defaultStyle.boxShadow(context),
+                ),
+                padding: padding ?? defaultStyle.padding(context),
+                child: Row(
+                  children: [
+                    SizedBox(
+                      width: 40,
+                      height: 40,
+                      child: icon ??
                           Icon(
                             defaultStyle.icon(context),
-                            size: 24,
+                            size: 40,
                             color: iconColor,
                           ),
-                      const SizedBox(width: 12),
-                      Expanded(
-                        child: BuiltInContent(
-                          style: defaultStyle,
-                          title: title,
-                          description: description,
-                          primaryColor: primaryColor,
-                          foregroundColor: foregroundColor,
-                          backgroundColor: backgroundColor,
-                          showProgressBar: showProgressBar,
-                          progressBarValue: progressBarValue,
-                          progressBarWidget: progressBarWidget,
-                          progressIndicatorTheme: progressIndicatorTheme,
-                        ),
+                    ),
+                    const SizedBox(width: 12),
+                    Expanded(
+                      child: BuiltInContent(
+                        style: defaultStyle,
+                        title: title,
+                        description: description,
+                        primaryColor: primaryColor,
+                        foregroundColor: foregroundColor,
+                        backgroundColor: backgroundColor,
+                        showProgressBar: showProgressBar,
+                        progressBarValue: progressBarValue,
+                        progressBarWidget: progressBarWidget,
+                        progressIndicatorTheme: progressIndicatorTheme,
                       ),
-                      const SizedBox(width: 30),
-                    ],
+                    ),
+                  ],
+                ),
+              ),
+              Positioned(
+                top: 8,
+                right: 13,
+                child: GestureDetector(
+                  onTap: () {
+                    toastification.dismiss(item!);
+                  },
+                  child: ToastCloseButton(
+                    showCloseButton: showCloseButton,
+                    defaultStyle: defaultStyle,
+                    closeIcon: closeIcon,
                   ),
                 ),
-                Positioned.fill(
-                  child: Align(
-                    alignment: Alignment.centerRight,
-                    child: GestureDetector(
-                        onTap: () {
-                          toastification.dismiss(item!);
-                        },
-                        child: Padding(
-                          padding: const EdgeInsets.only(right: 8),
-                          child: ToastCloseButton(
-                            showCloseButton: showCloseButton,
-                            defaultStyle: defaultStyle,
-                            closeIcon: closeIcon,
-                          ),
-                        )),
-                  ),
-                ),
-              ],
-            )),
+              )
+            ],
+          ),
+        ),
       ),
     );
   }
