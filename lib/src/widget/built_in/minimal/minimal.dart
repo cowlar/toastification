@@ -25,8 +25,12 @@ class MinimalToastWidget extends StatelessWidget {
     this.progressBarWidget,
     this.progressIndicatorTheme,
     required this.closeIcon,
+    this.showStayButton,
+    this.stayButtonTap,
   });
 
+  final bool? showStayButton;
+  final VoidCallback? stayButtonTap;
   final ToastificationType type;
   final ToastificationItem? item;
   final String title;
@@ -142,6 +146,8 @@ class MinimalToastWidget extends StatelessWidget {
                             progressBarValue: progressBarValue,
                             progressBarWidget: progressBarWidget,
                             progressIndicatorTheme: progressIndicatorTheme,
+                            showStayButton: showStayButton,
+                            stayButtonTap: stayButtonTap,
                           ),
                         ),
                       ],

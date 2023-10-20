@@ -43,8 +43,12 @@ class BuiltInContent extends StatelessWidget {
     this.progressBarValue,
     this.progressBarWidget,
     this.progressIndicatorTheme,
+    this.showStayButton = false,
+    this.stayButtonTap,
   });
 
+  final bool? showStayButton;
+  final VoidCallback? stayButtonTap;
   final BuiltInStyle style;
 
   final String title;
@@ -93,6 +97,30 @@ class BuiltInContent extends StatelessWidget {
                   ),
             ),
           ],
+          if (showStayButton == true)
+            Padding(
+              padding: const EdgeInsets.only(top: 10),
+              child: Center(
+                child: GestureDetector(
+                  onTap: stayButtonTap ?? () {},
+                  child: Container(
+                    padding:
+                        const EdgeInsets.symmetric(horizontal: 15, vertical: 4),
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(4),
+                    ),
+                    child: Text(
+                      'Stay',
+                      style: TextStyle(
+                        color: foregroundColor,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+            ),
           if (showProgressBar) ...[
             const SizedBox(height: 10),
             ProgressIndicatorTheme(

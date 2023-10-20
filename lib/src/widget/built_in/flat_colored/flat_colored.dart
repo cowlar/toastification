@@ -25,8 +25,12 @@ class FlatColoredToastWidget extends StatelessWidget {
     this.progressBarWidget,
     required this.closeIcon,
     this.progressIndicatorTheme,
+    this.showStayButton,
+    this.stayButtonTap,
   });
 
+  final bool? showStayButton;
+  final VoidCallback? stayButtonTap;
   final ToastificationType type;
 
   final String title;
@@ -132,6 +136,8 @@ class FlatColoredToastWidget extends StatelessWidget {
                         progressBarValue: progressBarValue,
                         progressBarWidget: progressBarWidget,
                         progressIndicatorTheme: progressIndicatorTheme,
+                        showStayButton: showStayButton,
+                        stayButtonTap: stayButtonTap,
                       ),
                     ),
                   ],

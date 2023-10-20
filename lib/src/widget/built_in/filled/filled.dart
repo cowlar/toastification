@@ -25,8 +25,12 @@ class FilledToastWidget extends StatelessWidget {
     this.progressBarWidget,
     this.progressIndicatorTheme,
     required this.closeIcon,
+    this.showStayButton = false,
+    this.stayButtonTap,
   });
 
+  final bool? showStayButton;
+  final VoidCallback? stayButtonTap;
   final ToastificationType type;
   final ToastificationItem? item;
 
@@ -132,20 +136,33 @@ class FilledToastWidget extends StatelessWidget {
                         progressBarValue: progressBarValue,
                         progressBarWidget: progressBarWidget,
                         progressIndicatorTheme: progressIndicatorTheme,
+                        showStayButton: showStayButton,
+                        stayButtonTap: stayButtonTap,
                       ),
                     ),
                   ],
                 ),
               ),
-              Positioned(
-                top: 8,
-                right: 13,
-                child: ToastCloseButton(
-                  showCloseButton: showCloseButton,
-                  defaultStyle: defaultStyle,
-                  closeIcon: closeIcon,
+              if (direction == TextDirection.ltr)
+                Positioned(
+                  top: 8,
+                  right: 13,
+                  child: ToastCloseButton(
+                    showCloseButton: showCloseButton,
+                    defaultStyle: defaultStyle,
+                    closeIcon: closeIcon,
+                  ),
                 ),
-              ),
+              if (direction == TextDirection.rtl)
+                Positioned(
+                  top: 8,
+                  left: 13,
+                  child: ToastCloseButton(
+                    showCloseButton: showCloseButton,
+                    defaultStyle: defaultStyle,
+                    closeIcon: closeIcon,
+                  ),
+                ),
             ],
           ),
         ),

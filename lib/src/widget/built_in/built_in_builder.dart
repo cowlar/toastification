@@ -34,8 +34,12 @@ class BuiltInBuilder extends StatelessWidget {
     this.loaderBackgroundColor,
     this.loaderColor,
     required this.closeIcon,
+    this.showStayButton,
+    this.stayButtonTap,
   });
 
+  final bool? showStayButton;
+  final VoidCallback? stayButtonTap;
   final ToastificationItem item;
 
   final ToastificationType? type;
@@ -179,8 +183,11 @@ class BuiltInToastBuilder extends StatelessWidget {
     required this.closeIcon,
     this.loaderBackgroundColor,
     this.loaderColor,
+    this.showStayButton,
+    this.stayButtonTap,
   });
-
+  final bool? showStayButton;
+  final VoidCallback? stayButtonTap;
   final ToastificationItem? item;
 
   final ToastificationType? type;
@@ -274,6 +281,8 @@ class BuiltInToastBuilder extends StatelessWidget {
               progressIndicatorTheme: progressBarTheme,
               progressBarWidget: progressBarWidget,
               closeIcon: closeIcon,
+              showStayButton: showStayButton,
+              stayButtonTap: stayButtonTap,
             ),
           ToastificationStyle.flatColored => FlatColoredToastWidget(
               type: type,
@@ -295,6 +304,8 @@ class BuiltInToastBuilder extends StatelessWidget {
               progressIndicatorTheme: progressBarTheme,
               progressBarWidget: progressBarWidget,
               closeIcon: closeIcon,
+              showStayButton: showStayButton,
+              stayButtonTap: stayButtonTap,
             ),
           ToastificationStyle.fillColored => FilledToastWidget(
               type: type,
@@ -316,6 +327,8 @@ class BuiltInToastBuilder extends StatelessWidget {
               progressIndicatorTheme: progressBarTheme,
               progressBarWidget: progressBarWidget,
               closeIcon: closeIcon,
+              showStayButton: showStayButton,
+              stayButtonTap: stayButtonTap,
             ),
           ToastificationStyle.minimal => MinimalToastWidget(
               type: type,
@@ -337,6 +350,8 @@ class BuiltInToastBuilder extends StatelessWidget {
               progressIndicatorTheme: progressBarTheme,
               progressBarWidget: progressBarWidget,
               closeIcon: closeIcon,
+              showStayButton: showStayButton,
+              stayButtonTap: stayButtonTap,
             ),
         };
       },
